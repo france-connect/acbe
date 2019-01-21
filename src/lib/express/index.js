@@ -1,6 +1,5 @@
 const helmet = require('helmet');
 const bodyParser = require('body-parser');
-const compression = require('compression');
 const methodOverride = require('method-override');
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
@@ -17,7 +16,6 @@ module.exports.index = (app) => {
     app.use(bodyParser.urlencoded({ extended: false }));
     app.use(cookieParser());
     app.use(methodOverride());
-    app.use(compression());
     app.use(helmet());
     app.use(cors({ origin: true, credentials: true }));
 
