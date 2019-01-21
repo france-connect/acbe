@@ -6,8 +6,8 @@ const CLIENT = '/client';
 module.exports = {
   secret: `your_secret_key`, // Secret Key
   server: { // Express
-    ip: 'localhost',
-    port: 8000,
+    ip: 'int-cw',
+    port: 4050,
   },
   log: true, // show logs
   // Roles: if a user has multiple roles, will take the time of the greater role
@@ -24,7 +24,7 @@ module.exports = {
     disabled: '/:url(api|assets|auth|config|lib|views)/*' // paths 404
   },
   "socket.io": { // Socket.io
-    port: 8001, // public port listen, change also in views/default/demo.js
+    port: 4050, // public port listen, change also in views/default/demo.js
     example: true, // router -> http://localhost:8000/socket 
     redis: { // Redis config
       host: '127.0.0.1',
