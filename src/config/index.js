@@ -6,7 +6,7 @@ const CLIENT = '/client';
 module.exports = {
   secret: `your_secret_key`, // Secret Key
   server: { // Express
-    ip: 'int-cw',
+    ip: 'localhost',
     port: 4050,
   },
   log: true, // show logs
