@@ -86,7 +86,7 @@ module.exports = {
   client: `${path.normalize(`${__dirname}/../..`)}${CLIENT}`, // client
 
   FC_URL: 'https://fca.int-cw.dev-franceconnect.fr',
-  FS_URL: 'http://localhost:8080',
+  FS_URL: 'https://agentconnect.int-cw.dev-franceconnect.fr',
   AUTHORIZATION_FC_PATH: '/api/v1/authorize',
   TOKEN_FC_PATH: '/api/v1/token',
   USERINFO_FC_PATH: '/api/v1/userinfo',
