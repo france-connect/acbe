@@ -3,10 +3,10 @@ const middleware = require('../../../lib/express/customMiddleware/checkToken.mid
 
 module.exports = (app) => {
     app.get('/api/agentConnect/callToken/:code?*', middleware.checkToken, controller.getTokenAndUserInfos, (req, res) => {
-        if (req.response.status !== 'failed') {
-            res.status(200).json(req.response);
+        if (res.information.status === 200) {
+            res.send(res.information.data);
         } else {
-            res.status(400).json(req.response);
+            res.send(res.information);
         }
     });
 }

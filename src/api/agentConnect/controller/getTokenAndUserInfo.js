@@ -24,11 +24,12 @@ const getTokenAndUserInfos = (req, res, next) => {
             return requestUserInfo(config, tokenRes.data.access_token, axios);
         })
         .then((infosRes) => {
-            console.log('user infos : ', infosRes.data);
-            res.render('userInfo', getRenderObj(infosRes));
+            res.information = infosRes;
+            next();
         })
         .catch((err) => {
-            res.send(err.message);
+            res.information = err.message;
+            next();
         });
 
 };
