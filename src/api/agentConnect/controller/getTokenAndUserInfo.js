@@ -26,6 +26,7 @@ const getTokenAndUserInfos = (req, res, next) => {
         .then((infosRes) => {
             res.information = infosRes;
             next();
+
         })
         .catch((err) => {
             res.information = err.message;
@@ -43,7 +44,7 @@ const getTokenAndUserInfos = (req, res, next) => {
 * @return {Promise}
 */
 
-const requestTokenWithCode = (params, code, axios) => {
+const requestTokenWithCode = (params, code) => {
     if (!code) {
         return Promise.reject(new Error(`Error fetching your code
         verify your openIdParameters : ${params}`));
